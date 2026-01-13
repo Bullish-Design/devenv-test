@@ -1,5 +1,10 @@
 { pkgs, lib, config, inputs, ... }:
 
+
+let
+  # Test the uv2nix import functionality
+  quote-bot = config.languages.python.import ./. { };
+in
 {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
@@ -9,6 +14,12 @@
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
+  languages.python = {
+    enable = true;
+    version = "3.13";
+    venv.enable = true;
+    uv.enable = true;
+  };
 
   # https://devenv.sh/processes/
   # processes.dev.exec = "${lib.getExe pkgs.watchexec} -n -- ls -la";
@@ -41,6 +52,14 @@
 
   # https://devenv.sh/git-hooks/
   # git-hooks.hooks.shellcheck.enable = true;
+
+  #packages = [ quote-bot ];
+
+# Add this:
+  outputs = {
+    inherit quote-bot;
+    # quote-bot = config.languages.python.import ./src {};
+  };
 
   # See full reference at https://devenv.sh/reference/options/
 }
