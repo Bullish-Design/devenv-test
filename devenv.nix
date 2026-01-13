@@ -53,6 +53,8 @@ in
   # https://devenv.sh/git-hooks/
   # git-hooks.hooks.shellcheck.enable = true;
 
+  #packages = [ quote-bot ];
+
 # Add this:
   outputs = {
     inherit quote-bot;

@@ -3,16 +3,33 @@
     "devenv": {
       "locked": {
         "dir": "src/modules",
-        "lastModified": 1768251012,
+        "lastModified": 1768335497,
         "owner": "cachix",
         "repo": "devenv",
-        "rev": "a444c2e25abd025b312c8de8a86607d36390b685",
+        "rev": "95726aba19bd12dd0075a98e4079e46afe86e89f",
         "type": "github"
       },
       "original": {
         "dir": "src/modules",
         "owner": "cachix",
         "repo": "devenv",
+        "type": "github"
+      }
+    },
+    "devenv-py2nix": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1768347785,
+        "owner": "Bullish-Design",
+        "repo": "devenv-py2nix",
+        "rev": "a28d978d7ef444cea61620624b4cce2e8634e6d2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Bullish-Design",
+        "repo": "devenv-py2nix",
         "type": "github"
       }
     },
@@ -103,7 +120,7 @@
     },
     "nix2container": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1767430085,
@@ -120,14 +137,15 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1768259692,
+        "lastModified": 1768127708,
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "369b90b7fc9d1b04b6d5bf4fd41219cff42167ff",
+        "rev": "ffbc9f8cbaacfb331b6017d5a5abb21a492c9a38",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -135,7 +153,7 @@
     "nixpkgs-python": {
       "inputs": {
         "flake-compat": "flake-compat_2",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
         "lastModified": 1765052656,
@@ -152,6 +170,20 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1768346665,
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "35308652a3eb7addbcbdb7b34fb556f49777387e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1767052823,
         "owner": "cachix",
         "repo": "devenv-nixpkgs",
@@ -165,7 +197,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1767313136,
         "owner": "NixOS",
@@ -227,10 +259,11 @@
     "root": {
       "inputs": {
         "devenv": "devenv",
+        "devenv-py2nix": "devenv-py2nix",
         "git-hooks": "git-hooks",
         "mk-shell-bin": "mk-shell-bin",
         "nix2container": "nix2container",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nixpkgs-python": "nixpkgs-python",
         "pre-commit-hooks": [
           "git-hooks"
