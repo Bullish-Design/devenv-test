@@ -48,7 +48,10 @@
   # https://devenv.sh/git-hooks/
   # git-hooks.hooks.shellcheck.enable = true;
 
-  outputs.nixbuild = config.languages.python.import ./. { inherit pkgs; };
+# Add this:
+  outputs = {
+    quote-bot = config.languages.python.import ./. {};
+  };
 
   # See full reference at https://devenv.sh/reference/options/
 }
