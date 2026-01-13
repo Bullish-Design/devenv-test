@@ -19,6 +19,7 @@
         {
           devenv-up = self.devShells.${system}.default.config.proc;
         }
+        self.devShells.${system}.default.config.outputs
       );
 
       devShells = forEachSystem (system:

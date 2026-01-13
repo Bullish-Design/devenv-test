@@ -1,5 +1,10 @@
 { pkgs, lib, config, inputs, ... }:
 
+
+let
+  # Test the uv2nix import functionality
+  quote-bot = config.languages.python.import ./. { };
+in
 {
   # https://devenv.sh/basics/
   env.GREET = "devenv";
@@ -50,7 +55,8 @@
 
 # Add this:
   outputs = {
-    quote-bot = config.languages.python.import ./. {};
+    inherit quote-bot;
+    # quote-bot = config.languages.python.import ./src {};
   };
 
   # See full reference at https://devenv.sh/reference/options/
