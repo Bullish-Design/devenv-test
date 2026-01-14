@@ -10,7 +10,10 @@ in
   env.GREET = "devenv";
 
   # https://devenv.sh/packages/
-  packages = [ pkgs.git ];
+  packages = [ 
+    pkgs.git 
+    quote-bot
+  ];
 
   # https://devenv.sh/languages/
   # languages.rust.enable = true;
