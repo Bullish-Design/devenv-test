@@ -12,7 +12,7 @@ in
   # https://devenv.sh/packages/
   packages = [ 
     pkgs.git 
-    quote-bot
+    #quote-bot
   ];
 
   # https://devenv.sh/languages/
